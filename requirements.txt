@@ -1,0 +1,32 @@
+# ─── Face Mask Detection - Requirements ───────────────────────────────────────
+# Python 3.8 – 3.10 recommended
+# Install: pip install -r requirements.txt
+
+# ── Deep Learning ──────────────────────────────────────────────────────────────
+tensorflow>=2.10.0,<2.16.0        # Keras included; GPU version optional (tensorflow-gpu)
+keras>=2.10.0                     # High-level API (bundled with TF 2.x)
+
+# ── Computer Vision ────────────────────────────────────────────────────────────
+opencv-python>=4.7.0              # cv2 — video capture, DNN face detector, drawing
+opencv-contrib-python>=4.7.0      # Optional: extra modules (not strictly required)
+
+# ── Numerical / Data ───────────────────────────────────────────────────────────
+numpy>=1.23.0,<2.0.0              # Array ops, blobFromImage pre-processing
+
+# ── ML Utilities ───────────────────────────────────────────────────────────────
+scikit-learn>=1.2.0               # LabelBinarizer, train_test_split, classification_report
+
+# ── Visualisation (training script) ───────────────────────────────────────────
+matplotlib>=3.6.0                 # Training accuracy / loss plots
+
+# ── Standard library (no install needed) ──────────────────────────────────────
+# os, time, datetime, argparse  → built-in
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GPU note:
+#   Replace  tensorflow  with  tensorflow[and-cuda]  (TF 2.13+) or
+#   install  tensorflow-gpu==<version>  matching your CUDA toolkit.
+#
+# Minimal install (inference-only, no training):
+#   pip install tensorflow opencv-python numpy
+# ──────────────────────────────────────────────────────────────────────────────
